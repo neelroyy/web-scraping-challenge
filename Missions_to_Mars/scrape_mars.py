@@ -2,7 +2,7 @@
 
 from bs4 import BeautifulSoup as bs
 import pandas as pd
-from splinter import browser
+from splinter import Browser
 
 # Chomedriver path
 from webdriver_manager.chrome import ChromeDriverManager
