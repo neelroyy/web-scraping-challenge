@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraping Challenge: Mission to Mars</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <a href="/scrape">SCRAPE</a>
+    <br>
+    <h3>{{mars_data.news_title}}</h3>
+    <br>
+    {{mars_data.news_p}}
+    <br>
+    {{mars_data.htmltable|safe}}
+    <br>
+    <img src="{{mars_data.featured_image_url}}">
+    <br>
+    {% for hemisphere in mars_data.hemispheres %}
+    <img src="{{hemisphere.image_url}}" width="35%">
+    {% endfor %}
+</body>
+
+</html>
